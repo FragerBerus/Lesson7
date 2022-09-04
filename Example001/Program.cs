@@ -1,6 +1,6 @@
 ﻿// Собрать строку с числами от a до b, a <= b
 Console.Clear();
-string NumbersFor(int a, int b)
+string NumbersFor(int a, int b) // Без рекурсии
 {
     string result = String.Empty;   // Возвращение пустой строки
     for (int i = a; i <= b; i++)
@@ -9,7 +9,7 @@ string NumbersFor(int a, int b)
     }                       // правый и присваивает ему значение
     return result;
 }
-string NumbersRec(int a, int b)
+string NumbersRec(int a, int b) // Использование рекурсии
 {
     if (a <= b) return $"{a} " + NumbersRec(a + 1, b);
     else return String.Empty;
